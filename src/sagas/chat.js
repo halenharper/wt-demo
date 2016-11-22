@@ -20,7 +20,7 @@ export function* getChat(action) {
 
 export function* postChat(action) {
   try {
-    const chat = yield Axios.post(
+    yield Axios.post(
       `${Constants.API_URL}/chat`,
       { ...action.payload }
     );

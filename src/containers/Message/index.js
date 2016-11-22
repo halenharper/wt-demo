@@ -1,3 +1,16 @@
 import Message from './Message';
+import { connect } from 'react-redux';
+import {
+  GET_MESSAGE_PENDING,
+} from '../../actions';
 
-export default Message;
+const mapStateToProps = (state, ownProps) => ({
+  message: state.message,
+  chatId: ownProps.params.id,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  getMessage: (id) => dispatch({ type: GET_MESSAGE_PENDING, payload: id }),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Message);

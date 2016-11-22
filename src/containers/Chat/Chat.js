@@ -25,13 +25,13 @@ class Chat extends React.Component {
     }
 
     return (
-      <ul>
-        {this.props.chat.list.map(chat =>
-          <li>
-            id: {chat.id} <b>{chat.title}</b>
-          </li>
+      <div>
+        {this.props.chat.list.map((chat, index) =>
+          <a key={index} href={`/message/${chat.id}`} style={{display: "block"}}>
+            id: {chat.id} <b>{chat.title || "unnamed"}</b>
+          </a>
         )}
-      </ul>
+      </div>
     )
   }
 }

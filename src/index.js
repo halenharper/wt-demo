@@ -13,7 +13,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <Route path="chat" component={Chat} />
-        <Route path="message" component={Message} />
+        <Route path="message(/:id)" component={Message} />
       </Route>
     </Router>
   </Provider>,
