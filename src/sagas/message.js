@@ -10,7 +10,6 @@ import {
 import Constants from '../constants';
 
 export function* getMessage(action) {
-  console.log('payload', action.payload);
   try {
     const messages = yield Axios.get(
       `${Constants.API_URL}/message`,
