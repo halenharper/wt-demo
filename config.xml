@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+  xmlns="http://www.w3.org/ns/widgets"
+  xmlns:cdv="http://cordova.apache.org/ns/1.0"
+  id="org.wt.demo"
+  version="0.0.1"
+>
+  <name>WT-48</name>
+  <description>
+      Demo app for WT-48
+  </description>
+  <author email="zmeecer@gmail.com" href="https://github.com/zmeecer">
+      @zmeecer
+  </author>
+  <plugin name="cordova-plugin-whitelist" spec="1" />
+  <access origin="*" />
+
+  <preference name="permissions"                value="none"/>
+  <preference name="phonegap-version"           value="cli-6.3.0" />
+  <preference name="orientation"                value="portrait" />
+  <preference name="target-device"              value="universal" />
+  <preference name="fullscreen"                 value="true" />
+  <preference name="webviewbounce"              value="false" />
+  <preference name="prerendered-icon"           value="true" />
+  <preference name="stay-in-webview"            value="false" />
+  <preference name="ios-statusbarstyle"         value="black-opaque" />
+  <preference name="detect-data-types"          value="true" />
+  <preference name="exit-on-suspend"            value="false" />
+  <preference name="show-splash-screen-spinner" value="true" />
+  <preference name="auto-hide-splash-screen"    value="false" />
+  <preference name="disable-cursor"             value="false" />
+  <preference name="android-minSdkVersion"      value="7" />
+  <preference name="android-installLocation"    value="auto" />
+
+  <platform name="android">
+  </platform>
+  <platform name="ios">
+  </platform>
+</widget>
