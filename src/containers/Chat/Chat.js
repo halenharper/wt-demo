@@ -1,4 +1,5 @@
 import React from 'react';
+import NewChat from './New';
 
 class Chat extends React.Component {
   componentDidMount() {
@@ -31,6 +32,7 @@ class Chat extends React.Component {
             id: {chat.id} <b>{chat.title || "unnamed"}</b>
           </a>
         )}
+        <NewChat createChat={this.props.createChat} />
       </div>
     )
   }

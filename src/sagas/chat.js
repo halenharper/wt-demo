@@ -22,10 +22,10 @@ export function* postChat(action) {
   try {
     yield Axios.post(
       `${Constants.API_URL}/chat`,
-      { ...action.payload }
+      { title: action.payload }
     );
     yield put({ type: NEW_CHAT_SUCCESS });
-    yield put({ type: GET_CHAT_PENDING });
+    yield put({ type: GET_CHAT_PENDING, payload: action.payload.chat });
   } catch (error) {
     yield put({ type: NEW_CHAT_FAIL, payload: { error: error.message }});
   }

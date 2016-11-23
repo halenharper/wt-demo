@@ -12,8 +12,7 @@ import Constants from '../constants';
 export function* getMessage(action) {
   try {
     const messages = yield Axios.get(
-      `${Constants.API_URL}/message`,
-      { params: { chat: action.payload }}
+      `${Constants.API_URL}/message?chat=${action.payload}`,
     );
     yield put({ type: GET_MESSAGE_SUCCESS, payload: messages.data });
   } catch (error) {
@@ -28,7 +27,7 @@ export function* postMessage(action) {
       { ...action.payload }
     );
     yield put({ type: NEW_MESSAGE_SUCCESS });
-    yield put({ type: GET_MESSAGE_PENDING });
+    yield put({ type: GET_MESSAGE_PENDING, payload: action.payload.chat });
   } catch (error) {
     yield put({ type: NEW_MESSAGE_FAIL, payload: { error: error.message }});
   }
