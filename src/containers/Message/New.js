@@ -1,4 +1,5 @@
 import React from 'react';
+import { RaisedButton, TextField } from 'material-ui';
 
 class NewMessage extends React.Component {
   constructor(props) {
@@ -35,8 +36,8 @@ class NewMessage extends React.Component {
     return (
       <form onSubmit={this.onSubmit}>
         <label style={{ color: 'red' }}>{this.state.error}</label><br/>
-        <input type="text" onChange={this.onChange} value={this.state.message} />
-        <input type="submit" value="Send" />
+        <TextField name="message" onChange={this.onChange} value={this.state.message} />
+        <RaisedButton type="submit" label="Send" />
       </form>
     )
   }

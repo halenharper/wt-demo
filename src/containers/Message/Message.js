@@ -49,7 +49,9 @@ class Message extends React.Component {
 
         {this.renderList()}
 
-        <NewMessage createMessage={this.createMessage} />
+        {this.props.chatId &&
+          <NewMessage createMessage={this.createMessage} />
+        }
       </div>
     )
   }
